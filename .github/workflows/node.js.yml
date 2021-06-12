@@ -40,7 +40,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob delete-batch -s asecondopinion --pattern $web/*
+            az storage blob delete-batch --account-name asecondopinion -s '$web'
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
