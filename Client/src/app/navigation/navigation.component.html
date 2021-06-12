@@ -9,9 +9,39 @@
   >
     <mat-toolbar></mat-toolbar>
     <mat-nav-list>
-      <mat-list-item> Questions </mat-list-item>
-      <mat-list-item> Ask A Question </mat-list-item>
-      <mat-list-item> Expert Events </mat-list-item>
+      <mat-list-item>
+        <a matLine routerLink="/">
+        <button mat-icon-button>
+           <mat-icon>question_answer</mat-icon>
+        </button>
+        See Questions
+      </a>
+     </mat-list-item>
+     <mat-list-item>
+      <a matLine routerLink="/MyQuestions">
+      <button mat-icon-button>
+         <mat-icon>list</mat-icon>
+      </button>
+      My Questions
+    </a>
+   </mat-list-item>
+   <mat-list-item>
+    <a matLine routerLink="/AskAQuestion">
+    <button mat-icon-button>
+       <mat-icon>help</mat-icon>
+    </button>
+    Ask A Question
+  </a>
+ </mat-list-item>
+     <mat-list-item>
+      <a matLine routerLink="/ExpertPanel">
+      <button mat-icon-button>
+         <mat-icon>recent_actors</mat-icon>
+      </button>
+      Expert Panel
+    </a>
+   </mat-list-item>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
