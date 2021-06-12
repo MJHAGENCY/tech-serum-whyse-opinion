@@ -3,11 +3,13 @@ export class Question {
     questionText: string;
     doctor: Doctor;
     categories: Category[];
+    answers: Answer[];
     constructor(){
         this.questionText = "";
         this.questionTitle = "";
         this.doctor = new Doctor();
         this.categories = [];
+        this.answers = [];
     }
 }
 
@@ -22,8 +24,10 @@ export class Doctor {
 
 export class Answer {
     answerText:string;
+    doctor: Doctor;
     constructor(){
         this.answerText = "";
+        this.doctor = new Doctor();
     }
 }
 

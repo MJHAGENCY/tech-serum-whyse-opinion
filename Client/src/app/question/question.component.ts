@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Question } from 'src/models/models';
 
 @Component({
   selector: 'app-question',
@@ -6,7 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit {
-  @Input() question = {};
+  @Input()
+  question: Question = new Question();
+
+  followedStatus: boolean = false;
+  follow(){
+    this.followedStatus = !this.followedStatus;       
+}
 
   constructor() { }
 

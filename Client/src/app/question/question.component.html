@@ -1,11 +1,24 @@
 <mat-card class="question">
     <mat-card-header>
-      <mat-card-title>Test</mat-card-title>
-      <mat-card-subtitle>Test</mat-card-subtitle>
+      <mat-card-title>An {{question.doctor.careerStage}} {{question.doctor.specialty}} asks..</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p>
-        This is a really long question.
-      </p>
+      {{question.questionText}}
     </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="space-between stretch">
+      <button mat-icon-button color="warn">
+        <mat-icon>chat_bubble</mat-icon> {{question.answers.length}}
+      </button>
+      <button mat-icon-button (click)="follow()"  
+      [ngClass]="followedStatus ? 'followed' : 'unfollowed'">
+        <mat-icon>bookmark</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-card-actions>
   </mat-card>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Request to connect</button>
+    <button mat-menu-item>Report</button>
+  </mat-menu>
