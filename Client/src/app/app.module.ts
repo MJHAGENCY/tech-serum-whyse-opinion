@@ -26,6 +26,7 @@ import { AskAQuestionComponent } from './ask-a-question/ask-a-question.component
 import { ExpertPanelComponent } from './expert-panel/expert-panel.component';
 import { MyQuestionsComponent } from './my-questions/my-questions.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { QuestionDetailComponent } from './question-detail/question-detail.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -44,6 +45,7 @@ export function tokenGetter() {
     AskAQuestionComponent,
     ExpertPanelComponent,
     MyQuestionsComponent,
+    QuestionDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Question, Doctor } from 'src/models/models';
+import { Question, Doctor, Answer } from 'src/models/models';
 
 @Component({
   selector: 'app-questions-list',
@@ -16,6 +16,14 @@ export class QuestionsListComponent implements OnInit {
     newQ.doctor.specialty = "Gynoc";
     newQ.doctor.careerStage = "Early Career";
     newQ.answers = [];
+
+    let answer: Answer = new Answer();
+    answer.doctor = new Doctor();
+    answer.doctor.specialty = "Gynoc";
+    answer.doctor.careerStage = "Early Career";
+    answer.answerText = "I'm not sure.";
+    newQ.answers.push(answer);
+
     this.questions.push(newQ);
 
     newQ = new Question();

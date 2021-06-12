@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Question } from 'src/models/models';
+import { QuestionService } from '../question.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-question',
@@ -15,9 +17,15 @@ export class QuestionComponent implements OnInit {
     this.followedStatus = !this.followedStatus;       
 }
 
-  constructor() { }
+  constructor(public questionService: QuestionService, private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  questionDetail(){
+    this.questionService.question = this.question;
+    this.router.navigateByUrl('/QuestionDetail');
+
   }
 
 }

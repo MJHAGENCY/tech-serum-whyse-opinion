@@ -1,0 +1,19 @@
+<mat-card class="question">
+    <mat-card-header>
+      <mat-card-title>{{question.doctor.specialty}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{question.questionText}}
+    </mat-card-content>
+  </mat-card>
+
+<div *ngFor="let answer of question.answers">
+    <mat-card class="answer">
+        <mat-card-header>
+          <mat-card-title>{{answer.doctor.specialty}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          {{answer.answerText}}
+        </mat-card-content>
+      </mat-card>
+</div>

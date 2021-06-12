@@ -4,12 +4,14 @@ export class Question {
     doctor: Doctor;
     categories: Category[];
     answers: Answer[];
+    dateTime: Date;
     constructor(){
         this.questionText = "";
         this.questionTitle = "";
         this.doctor = new Doctor();
         this.categories = [];
         this.answers = [];
+        this.dateTime = new Date();
     }
 }
 
@@ -25,9 +27,11 @@ export class Doctor {
 export class Answer {
     answerText:string;
     doctor: Doctor;
+    dateTime: Date;
     constructor(){
         this.answerText = "";
         this.doctor = new Doctor();
+        this.dateTime = new Date();
     }
 }
 

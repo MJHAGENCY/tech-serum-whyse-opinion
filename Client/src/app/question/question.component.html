@@ -1,12 +1,12 @@
 <mat-card class="question">
     <mat-card-header>
-      <mat-card-title>An {{question.doctor.careerStage}} {{question.doctor.specialty}} asks..</mat-card-title>
+      <mat-card-title>{{question.doctor.specialty}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       {{question.questionText}}
     </mat-card-content>
     <mat-card-actions fxLayout="row" fxLayoutAlign="space-between stretch">
-      <button mat-icon-button color="warn">
+      <button mat-icon-button color="warn" (click)="questionDetail()">
         <mat-icon>chat_bubble</mat-icon> {{question.answers.length}}
       </button>
       <button mat-icon-button (click)="follow()"  
