@@ -38,12 +38,10 @@ jobs:
     - name: Purge blob storage.
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
         inlineScript: |
             az storage blob delete-batch --source "`$web" --account-name asecondopinion
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
         inlineScript: |
             az storage blob upload-batch --account-name asecondopinion -d '$web' -s ./Client/dist/Client
