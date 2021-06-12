@@ -25,6 +25,7 @@ import { AnswerComponent } from './answer/answer.component';
 import { AskAQuestionComponent } from './ask-a-question/ask-a-question.component';
 import { ExpertPanelComponent } from './expert-panel/expert-panel.component';
 import { MyQuestionsComponent } from './my-questions/my-questions.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -48,6 +49,7 @@ export function tokenGetter() {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,

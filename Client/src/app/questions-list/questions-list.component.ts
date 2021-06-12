@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Question } from 'src/models/models';
 
 @Component({
   selector: 'app-questions-list',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questions-list.component.scss']
 })
 export class QuestionsListComponent implements OnInit {
+  questions: Question[] = [];
 
-  constructor() { }
+  constructor() { 
+    let newQ: Question = new Question();
+    newQ.questionText = "Test";
+    this.questions.push(newQ);
+  }
 
   ngOnInit(): void {
   }

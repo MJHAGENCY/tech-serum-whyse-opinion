@@ -1,1 +1,3 @@
-<p>questions-list works!</p>
+<div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="25px" *ngFor="let question of questions">
+    <app-question [question]="question"></app-question>
+</div>
