@@ -35,4 +35,12 @@ jobs:
         name: client
         # A file, directory or wildcard pattern that describes what to upload
         path: ./Client/dist/Client
-        
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+            az storage blob upload-batch --account-name asecondopinion -d '$web' -s .
