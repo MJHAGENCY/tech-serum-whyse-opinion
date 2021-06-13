@@ -5,10 +5,9 @@ import { Question } from 'src/models/models';
   providedIn: 'root'
 })
 export class QuestionService {
-  question: Question = new Question();
+  question: Question | undefined = undefined;
   
   constructor() { 
-
   }
 
   questionDetail(question: Question){

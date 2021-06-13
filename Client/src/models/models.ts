@@ -1,25 +1,26 @@
+
 export class Question {
-    questionTitle: string;
     questionText: string;
     doctor: Doctor;
-    categories: Category[];
+    category: string;
     answers: Answer[];
-    dateTime: Date;
+    dateTime: string;
+    likes: number;
     constructor(){
         this.questionText = "";
-        this.questionTitle = "";
         this.doctor = new Doctor();
-        this.categories = [];
+        this.category = "";
         this.answers = [];
-        this.dateTime = new Date();
+        this.dateTime = "";
+        this.likes = 0;
     }
 }
 
 export class Doctor {
-    careerStage: string;
+    username: string;
     specialty: string;
     constructor(){
-        this.careerStage = "";
+        this.username = "";
         this.specialty = "";
     }
 }
@@ -27,17 +28,16 @@ export class Doctor {
 export class Answer {
     answerText:string;
     doctor: Doctor;
-    dateTime: Date;
+    dateTime: string;
+    likes: number;
     constructor(){
         this.answerText = "";
         this.doctor = new Doctor();
-        this.dateTime = new Date();
+        this.dateTime = "";
+        this.likes = 0;
     }
 }
 
-export class Category{
-    categoryText: string;
-    constructor(){
-        this.categoryText = "";
-    }
+export class DataLoad {
+    questions: Question[] = [];
 }

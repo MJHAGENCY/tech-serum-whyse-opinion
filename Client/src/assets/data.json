@@ -1,0 +1,122 @@
+{
+  "questions": [
+    {
+      "questionText": "I have a 44 year old female who had a bad case of shingles on her face about 2 months ago. She has sarcoidosis and diabetes. She wants the shingrix vaccine now even though she knows it is not approved for under age 50. She is willing to pay cash for it. Has anyone encountered this? I told her that I don't think it was studied in patients under age 50, so I don't think I can give it to her, but told her I'd ask my physician community for any additional input. Thanks!",
+      "dateTime": "6/11/2021 4:40PM CST",
+      "doctor": {
+        "username": "gynoc92dA02F",
+        "specialty": "Gynoc"
+      },
+      "category": "General",
+      "likes": 3,
+      "answers": [
+        {
+          "answerText": "not my wheelhouse, but I thought that vaccine was indicated even if you have had shingles. ( like covid vaccine still recommended after covid illness, ? to maximize immunity?). I had shingles before 50—thankfully mild—-my PCP recommended and I recently got Shingrix at 53. Made me sicker than my Covid vaccine!",
+          "dateTime": "6/11/2021 4:44PM CST",
+          "doctor": {
+            "username": "familypracA98f2Ac",
+            "specialty": "FamilyPractice"
+          },
+          "likes": 3
+        },
+        {
+          "answerText": "Prescribers can order it although under age 50, it is not covered by insurance. In my rheum practice, we do encourage early vaccination in certain populations. ",
+          "dateTime": "6/11/2021 4:51PM CST",
+          "doctor": {
+            "username": "hematolA9fs9t3g",
+            "specialty": "Hematologist"
+          },
+          "likes": 1
+        },
+        {
+          "answerText": "I’m curious about this too, many people I know have gotten shingles under 50. Assuming one wanted to pay cash, just so they could feel safe, is there a contraindication or just that it wasn’t studied in this age group? Is there a theoretical reason why It wouldn’t work fine? Presumably the number needed to prevent 1 case makes it not cost effective but other than that, is there a known harm? ",
+          "dateTime": "6/11/2021 5:14PM CST",
+          "doctor": {
+            "username": "familyprac39faACg",
+            "specialty": "FamilyPractice"
+          },
+          "likes": 10
+        },
+        {
+          "answerText": "give it to her. Lasts a ‘lifetime.’ No studies on younger people for length of efficacy. Suspect GSK will be watching efficacy carefully. Just give it! ",
+          "dateTime": "6/11/2021 5:44PM CST",
+          "doctor": {
+            "username": "internalmedFef9j3Aj",
+            "specialty": "InternalMedicine"
+          },
+          "likes": 0
+        }
+      ]
+    },
+    {
+      "questionText": "Is there a good app/resource to look up these “natural remedies”/ supplements out there? Patients come in on this “devil’s claw”, etc. and I’m out of my depth ",
+      "dateTime": "6/11/2021 3:20PM CST",
+      "doctor": {
+        "username": "familypracj8aA2rC",
+        "specialty": "FamilyPractice"
+      },
+      "category": "General",
+      "likes": 1,
+      "answers": [
+        {
+          "answerText": "Examine.com",
+          "dateTime": "6/11/2021 3:25PM CST",
+          "doctor": {
+            "username": "familyprac88dj2Af0",
+            "specialty": "FamilyPractice"
+          },
+          "likes": 5
+        },
+        {
+          "answerText": "Lexicomp",
+          "dateTime": "6/11/2021 4:21PM CST",
+          "doctor": {
+            "username": "familypracZ00wfja",
+            "specialty": "FamilyPractice"
+          },
+          "likes": 12
+        },
+        {
+          "answerText": "Tarascon pharmacopeia has a lot of supplements ",
+          "dateTime": "6/11/2021 5:14PM CST",
+          "doctor": {
+            "username": "familyprac39faACg",
+            "specialty": "FamilyPractice"
+          },
+          "likes": 1
+        },
+        {
+          "answerText": "Medscape has many herbal supplements listed (including this one) and is free with an app that can download the reference for offline use. I use that feature often when doing international medical volunteer work ",
+          "dateTime": "6/11/2021 7:54PM CST",
+          "doctor": {
+            "username": "internalmedFsd0vixAj",
+            "specialty": "InternalMedicine"
+          },
+          "likes": 0
+        }
+      ]
+    },
+    {
+      "questionText": "Hi! Primary care here. My 92F patient had a TIA years ago and has been on plavix ever since. No problems from it. The family wants to cut down her pill burden and asked if we can stop it or switch to aspirin (doesn’t really help pill burden, I know). Is there any consensus on this years out from a TIA? Thanks ",
+      "dateTime": "6/11/2021 9:20PM CST",
+      "doctor": {
+        "username": "primarycare90i23rfe",
+        "specialty": "PrimaryCare"
+      },
+      "category": "PrimaryCare",
+      "likes": 1,
+      "answers": []
+    },
+    {
+      "questionText": "Surgeons...would like your input regarding PUG (percutaneous ultrasound-guided gastrostomy). Intensivists at my hospital (IM or IM/CCM trained only, no EM/CCM or Anesthesia/CCM) have initiated contact with PUG reps to be able to perform their own feeding tubes. Currently, PEGs are performed by surgeons who cover Mon-Fri. After receiving the consult, PEG is 98+% performed by the surgeon within 24-48h. Before beginning to offer this service, the intensivists asked for support/backup from Surgery in case of complications. I met with the PUG rep and still have concerns about IM/CCM doing this type of procedure on the bowel. I'm also not convinced there's a true benefit to this procedure in terms of resources if most are done within 48h. PEG complication rates are exceedingly low, approaching zero, here for PEG (our group has a monopoly in the area and unless the patient moves, our group would see the complication). Reps proposed minimizing \"double anesthesia\", but even when we do bedside trach/PEG at the same time, patients get re-dosed with versed/fent, no inhaled agents, so not sure this is a valid argument either. Thoughts? What is everyone else doing? ",
+      "dateTime": "6/12/2021 12:20AM CST",
+      "doctor": {
+        "username": "gastrointer03efisk",
+        "specialty": "GastroInterologist"
+      },
+      "category": "Gastro",
+      "likes": 2,
+      "answers": []
+    }
+  ]
+}

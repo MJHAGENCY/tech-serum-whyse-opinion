@@ -1,13 +1,21 @@
 <mat-card class="question">
     <mat-card-header>
-      <mat-card-title>{{question.doctor.specialty}}</mat-card-title>
+      <mat-card-subtitle>{{question.doctor.username}} | {{question.dateTime}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
+      <hr/>
       {{question.questionText}}
+      <br/>
+      <br/>
+      <b><h4>#{{question.category}}</h4></b>
     </mat-card-content>
     <mat-card-actions fxLayout="row" fxLayoutAlign="space-between stretch">
       <button mat-icon-button color="warn" (click)="questionDetail()">
         <mat-icon>chat_bubble</mat-icon> {{question.answers.length}}
+      </button>
+      <button mat-icon-button class="liked">
+        <mat-icon>thumb_up</mat-icon>
+        <span>  {{question?.likes}}</span>
       </button>
       <button mat-icon-button (click)="follow()"  
       [ngClass]="followedStatus ? 'followed' : 'unfollowed'">

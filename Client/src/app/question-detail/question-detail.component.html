@@ -1,19 +1,47 @@
 <mat-card class="question">
     <mat-card-header>
-      <mat-card-title>{{question.doctor.specialty}}</mat-card-title>
+      <mat-card-subtitle>{{question?.doctor?.username}} | {{question?.dateTime}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      {{question.questionText}}
+      <hr/>
+      {{question?.questionText}}
+      <br/>
+      <br/>
+      <b><h4>#{{question?.category}}</h4></b>
     </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="space-between stretch">
+      <button mat-icon-button class="liked">
+        <mat-icon>thumb_up</mat-icon>
+        <span>  {{question?.likes}}</span>
+      </button>
+      <button mat-icon-button color="warn" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-card-actions>
   </mat-card>
 
-<div *ngFor="let answer of question.answers">
-    <mat-card class="answer">
+<div *ngFor="let answer of question?.answers" class="answer">
+    <mat-card>
         <mat-card-header>
-          <mat-card-title>{{answer.doctor.specialty}}</mat-card-title>
+          <mat-card-subtitle>{{answer?.doctor?.username}}  | {{answer?.dateTime}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           {{answer.answerText}}
         </mat-card-content>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="space-between stretch">
+          <button mat-icon-button (click)="like(answer)"  
+          [ngClass]="likedStatus(answer) ? 'liked' : 'unliked'">
+            <mat-icon>thumb_up</mat-icon>
+            <span>  {{answer?.likes}}</span>
+          </button>
+          <button mat-icon-button color="warn" [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </mat-card-actions>
       </mat-card>
 </div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Request to connect</button>
+  <button mat-menu-item>Report</button>
+</mat-menu>

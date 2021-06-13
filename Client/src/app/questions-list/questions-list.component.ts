@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Question, Doctor, Answer } from 'src/models/models';
+import { Question, Doctor, Answer, DataLoad } from 'src/models/models';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-questions-list',
@@ -9,36 +10,12 @@ import { Question, Doctor, Answer } from 'src/models/models';
 export class QuestionsListComponent implements OnInit {
   questions: Question[] = [];
 
-  constructor() { 
-    let newQ: Question = new Question();
-    newQ.questionText = "Is everyone removing ovaries for adenosarcoma? I have a 25 year old so kind of feel reticent to. No sarcomatous overgrowth described.";
-    newQ.doctor = new Doctor();
-    newQ.doctor.specialty = "Gynoc";
-    newQ.doctor.careerStage = "Early Career";
-    newQ.answers = [];
-
-    let answer: Answer = new Answer();
-    answer.doctor = new Doctor();
-    answer.doctor.specialty = "Gynoc";
-    answer.doctor.careerStage = "Early Career";
-    answer.answerText = "I'm not sure.";
-    newQ.answers.push(answer);
-
-    this.questions.push(newQ);
-
-    newQ = new Question();
-    newQ.questionText = `Interested in recommendations from the WGO.
-
-    I have a group of patients currently with stage 4 ovarian cancer. They have responded nicely to chemotherapy and surgey but haven’t quite normalized the CA 125 after 6-8 cycles of chemotherapy. 
-    
-    Are you all continuing with chemotherapy as long as the CA 125 is continouing to improve and the patient is tolerating treatment? Or do you assume that it’s not going to get to zero, and take a drug holiday? Or continue maintenance therapy ...`
-    newQ.doctor.careerStage = "Late Career";
-    newQ.doctor.specialty = "Gynoc";
-    newQ.answers = [];
-    this.questions.push(newQ);
-  }
-
-  ngOnInit(): void {
+  constructor(private httpClient: HttpClient){}
+  ngOnInit(){
+    this.httpClient.get("assets/data.json").subscribe(data =>{
+      console.log(data);
+      this.questions = (data as DataLoad).questions;
+    })
   }
 
 }
